@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="image">
+      <img src="./images/illustration-woman-online-mobile.svg" alt="FAQ illustration" class="woman">
+      <img src="./images/bg-pattern-mobile.svg" alt="shadow" class="shadow">
+      <img src="./images/illustration-box-desktop.svg" alt="box" class="box-desktop">
+      <img src="./images/illustration-woman-online-desktop.svg" alt="woman" class="woman-desktop">
+     
+    </div>
+
+    <div class="faq">
+      <h1>FAQ</h1>
+
+      <div class="question">
+        <div class="question-row">
+          <p class="question-text" id="output1">How many team members can I invite?</p>
+          <button onClick="expand(img1, answer1, output1)" class="collapsible">
+            <img src="./images/icon-arrow-down.svg" alt="" class="arrow" id="img1">
+          </button>
+        </div>
+        <p class="question-answer" id="answer1">You can invite up to 2 additional users on the Free plan. There is no limit on 
+        team members for the Premium plan.</p>
+      </div>
+
+      <div class="question">
+        <div class="question-row">
+        <p class="question-text" id="output2">What is the maximum file upload size?</p>
+        <button onClick="expand(img2, answer2, output2)" class="collapsible">
+          <img src="./images/icon-arrow-down.svg" alt="" class="arrow" id="img2">
+        </button>
+        </div>
+        <p class="question-answer" id="answer2">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+      </div>
+
+      <div class="question">
+        <div class="question-row">
+          <p class="question-text" id="output3">How do I reset my password?</p>
+          <button onClick="expand(img3, answer3, output3)" class="collapsible">
+            <img src="./images/icon-arrow-down.svg" alt="" class="arrow" id="img3">
+          </button>
+        </div>
+        <p class="question-answer" id="answer3">Click “Forgot password” from the login page or “Change password” from your profile page.
+          A reset link will be emailed to you.</p>
+      </div>
+
+      <div class="question">
+        <div class="question-row">
+          <p class="question-text" id="output4">Can I cancel my subscription?</p>
+          <button onClick="expand(img4, answer4, output4)" class="collapsible">
+            <img src="./images/icon-arrow-down.svg" alt="" class="arrow" id="img4">
+          </button>
+        </div>
+        <p class="question-answer" id="answer4"> Yes! Send us a message and we’ll process your request no questions asked.</p>
+      </div>
+
+      <div class="question">
+        <div class="question-row">
+          <p class="question-text" id="output5"> Do you provide additional support?</p>
+          <button onClick="expand(img5, answer5, output5)" class="collapsible">
+            <img src="./images/icon-arrow-down.svg" alt="" class="arrow" id="img5">
+          </button>
+        </div>
+        <p class="question-answer" id="answer5">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/javascript.js"> </script> 
+</body>
+</html>

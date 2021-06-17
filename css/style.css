@@ -1,0 +1,178 @@
+:root{
+
+/* Text */
+
+--very-dark-desaturated-blue: hsl(238, 29%, 16%);
+--soft-red: hsl(14, 88%, 65%);
+--very-dark-grayish-blue: hsl(237, 12%, 33%);
+--dark-grayish-blue: hsl(240, 6%, 50%);
+
+/* Gradient */
+
+--soft-violet: hsl(273, 75%, 66%);
+--soft-blue: hsl(240, 73%, 65%);
+
+/*Dividers */
+
+--light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body{
+    background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+    min-height:100vh;
+    padding: 150px 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size:13px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.container{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.faq{
+    width:100%;
+}
+
+.image{
+    position:absolute;
+    top:-110px;
+}
+
+.shadow{
+    position:absolute;
+    top: 110px;
+    left: 25px;
+}
+
+
+h1{
+    font-size:30px;
+    font-weight: 700;
+    margin: 120px 0 20px 0;
+    text-align:center;
+}
+
+.question{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom:1px solid var(--light-grayish-blue);
+    margin-top: 20px;
+    padding-bottom: 10px;
+    color: var(--very-dark-grayish-blue);
+}
+
+.question-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%
+}
+
+.collapsible{
+    border:none;
+    background-color:transparent;
+    cursor: pointer;
+}
+
+.question-answer{
+    transition: max-height 0.2s ease-out;
+    margin-top: 10px;
+    max-width:90%;
+    font-size:12px;
+    color: var(--very-dark-grayish-blue);
+    display: none;
+}
+
+.woman-desktop{
+    display:none;
+}
+
+.shadow-desktop{
+    display:none;
+}
+
+.box-desktop{
+    display:none;
+}
+
+@media only screen and (min-width: 1024px) {
+    .container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "image faq";
+        max-width:800px;
+        margin: 0 auto;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-position: 0px -100px;
+        background-repeat: no-repeat;
+        background-size: 700px 700px;
+        background-position: -400px;
+        text-align: left;
+    }
+
+    .faq{
+        grid-area:faq;
+    }
+
+    .image{
+        grid-area:image;
+        position:relative;
+        height:100%;
+        top:0;
+    }
+
+    h1{
+        margin: 30px 0;
+    }
+
+    .woman{
+        display:none;
+    }
+
+    .shadow{
+        display:none;
+    }
+
+    .woman-desktop{
+        display:block;
+        position:absolute;
+        top:50%;
+        height:300px;
+        width: 350px;
+        transform: translate(0, -50%);
+        left:-75px;
+        
+    }
+
+    .box-desktop{
+        display:block;
+        position:absolute;
+        top:60%;
+        height:125px;
+        width: 125px;
+        transform: translate(0, -60%);
+        left:-75px;
+        z-index:3;
+    
+    }
+
+    .shadow-desktop{
+        display:block;
+        position:absolute;
+        top: -250px;
+        left: -475px;
+        height:750px;
+        width: 750px;
+    }
+}
